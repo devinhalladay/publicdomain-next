@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Collapsible from "./Collapsible";
 import Image from "next/image";
+import { List, MagnifyingGlass } from "phosphor-react";
 
 export default function GlobalHeader(props) {
   const [isMenuVisible, toggleMenuVisibility] = useState(false);
@@ -18,70 +19,10 @@ export default function GlobalHeader(props) {
         <div
           onClick={() => toggleMenuVisibility(!isMenuVisible)}
           className="flex transition-all rounded-sm hover:bg-gray-200 hover:p-1 mr-2">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            fill="#000000"
-            viewBox="0 0 256 256">
-            <rect width="256" height="256" fill="none"></rect>
-            <line
-              x1="40"
-              y1="128"
-              x2="216"
-              y2="128"
-              stroke="#000000"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="16"></line>
-            <line
-              x1="40"
-              y1="64"
-              x2="216"
-              y2="64"
-              stroke="#000000"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="16"></line>
-            <line
-              x1="40"
-              y1="192"
-              x2="216"
-              y2="192"
-              stroke="#000000"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="16"></line>
-          </svg>
+          <List size={24} />
         </div>
         <div className="flex transition-all rounded-sm hover:bg-gray-200 hover:p-1 mr-4">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            fill="#000000"
-            viewBox="0 0 256 256">
-            <rect width="256" height="256" fill="none"></rect>
-            <circle
-              cx="116"
-              cy="116"
-              r="84"
-              fill="none"
-              stroke="#000000"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="16"></circle>
-            <line
-              x1="175.39356"
-              y1="175.40039"
-              x2="223.99414"
-              y2="224.00098"
-              fill="none"
-              stroke="#000000"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="16"></line>
-          </svg>
+          <MagnifyingGlass size={24} />
         </div>
 
         <nav ariaLabel="Main Navigation" className="">
@@ -131,20 +72,30 @@ export default function GlobalHeader(props) {
             </Collapsible>
           </nav>
           <div className="col-span-5 col-start-8">
-            <h4 className="pt-4 pb-4">
-              <a href="" className="flex">
-                <div className="w-44 h-32 inline-block relative">
-                  <Image
-                    src="https://source.unsplash.com/random"
-                    layout="fill"
-                    alt=""
-                  />
-                </div>
-                <p className="inline-block pl-4 text-2xl">
-                  Example Article
-                </p>
-              </a>
-            </h4>
+            <a href="" className="flex">
+              <div className="w-44 h-32 inline-block relative">
+                <Image
+                  src="https://source.unsplash.com/random"
+                  layout="fill"
+                  alt=""
+                />
+              </div>
+              <p className="inline-block pl-4 text-2xl">
+                Example Article
+              </p>
+            </a>
+            <a href="" className="flex">
+              <div className="w-44 h-32 inline-block relative">
+                <Image
+                  src="https://source.unsplash.com/random"
+                  layout="fill"
+                  alt=""
+                />
+              </div>
+              <p className="inline-block pl-4 text-2xl">
+                Example Article
+              </p>
+            </a>
           </div>
         </div>
       )}

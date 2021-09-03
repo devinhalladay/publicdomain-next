@@ -11,4 +11,6 @@
 * {
   font-family: 'Archivo', sans-serif;
   font-variation-settings: 'wdth' 80;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
