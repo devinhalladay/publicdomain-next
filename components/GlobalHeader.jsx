@@ -17,7 +17,7 @@ export default function GlobalHeader(props) {
         }`}>
         <div
           onClick={() => toggleMenuVisibility(!isMenuVisible)}
-          className="flex transition-all rounded-sm hover:bg-gray-200 hover:p-1 mr-4">
+          className="flex transition-all rounded-sm hover:bg-gray-200 hover:p-1 mr-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"

@@ -3,11 +3,13 @@ import Collapsible from "../components/Collapsible";
 import { useState } from "react";
 import { Head } from "next/head";
 import GlobalHeader from "../components/GlobalHeader";
+import StickyLogo from "../components/StickyLogo";
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <GlobalHeader />;
+      <GlobalHeader />
+      <StickyLogo />
       <div className="content">
         <Component {...pageProps} />
       </div>
