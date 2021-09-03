@@ -94,7 +94,7 @@ export default function GlobalHeader(props) {
             </Collapsible>
           </nav>
           <div className="col-span-5 col-start-8">
-            <a href="" className="flex">
+            <a href="" className="flex mb-4">
               <div className="w-44 h-32 inline-block relative">
                 <Image
                   src="https://source.unsplash.com/random"
