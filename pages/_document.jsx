@@ -15,15 +15,9 @@ class MyDocument extends Document {
             crossOrigin="true"
           />
           <link
-            href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62,100;76,400;76,600;84,900;88,100;88,200;88,400&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62,100;76,400;76,600;84,900;88,100;88,200;88,400&display=optional"
             rel="stylesheet"
           />
-          <noscript>
-            <link
-              href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62,100;76,400;76,600;84,900;88,100;88,200;88,400&display=swap"
-              rel="stylesheet"
-            />
-          </noscript>
         </Head>
         <body>
           <Main />
