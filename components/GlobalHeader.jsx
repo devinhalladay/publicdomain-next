@@ -5,7 +5,7 @@ import { List, MagnifyingGlass } from "phosphor-react";
 import { motion } from "framer-motion";
 
 const menuVariants = {
-  open: { height: "24rem", right: "30vw" },
+  open: { height: "30rem", right: "10vw" },
   closed: { height: "42px", right: "70vw" },
 };
 
@@ -83,7 +83,7 @@ export default function GlobalHeader(props) {
           layout="position"
           className="pt-3 grid grid-cols-12 gap-5 pb-3"
         >
-          <nav className="col-span-6">
+          <nav className="col-span-5">
             <Collapsible title="Investigate" border>
               <a href="">Link</a>
               <a href="">Link</a>
@@ -93,9 +93,9 @@ export default function GlobalHeader(props) {
               <a href="">Link</a>
             </Collapsible>
           </nav>
-          <div className="col-span-5 col-start-8">
+          <div className="col-span-6 col-start-7">
             <a href="" className="flex mb-4">
-              <div className="w-44 h-32 inline-block relative">
+              <div className="w-56 h-40 inline-block relative">
                 <Image
                   src="https://source.unsplash.com/random"
                   layout="fill"
@@ -105,7 +105,7 @@ export default function GlobalHeader(props) {
               <p className="inline-block pl-4 text-2xl">Example Article</p>
             </a>
             <a href="" className="flex">
-              <div className="w-44 h-32 inline-block relative">
+              <div className="w-56 h-40 inline-block relative">
                 <Image
                   src="https://source.unsplash.com/random"
                   layout="fill"
