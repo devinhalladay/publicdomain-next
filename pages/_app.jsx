@@ -10,10 +10,9 @@ function MyApp({ Component, pageProps }) {
     <>
       <GlobalHeader />
       <StickyLogo />
-      <div className="content">
+      <div className="content pt-24">
         <Component {...pageProps} />
       </div>
-      <footer>footer</footer>
     </>
   );
 }

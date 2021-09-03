@@ -14,3 +14,15 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.font-narrow {
+  font-variation-settings: "wdth" 62;
+}
+
+.font-condensed {
+  font-variation-settings: 'wdth' 80;
+}
+
+.text-v-bold {
+  font-variation-settings: 'wght' 600, 'wdth' 80;
+}
