@@ -9,7 +9,7 @@ export default function Home() {
       <Head>
         <title>Public Domain</title>
       </Head>
-      <div className="max-w-screen-2xl m-auto px-16 pb-16">
+      <div className="max-w-screen-2xl m-auto px-16 mb-24">
         <section className="grid grid-cols-12 gap-5">
           <div className="col-span-12 pb-6">
             <h1 className="text-5xl uppercase font-narrow font-light">
@@ -78,6 +78,44 @@ export default function Home() {
               </div>
               <p className="text-2xl">Example Project</p>
             </a>
+          </div>
+        </section>
+      </div>
+      <div className="max-w-screen-2xl m-auto px-16 mb-24">
+        <section className="grid grid-cols-12 gap-5">
+          <div className="col-span-12 pb-4 border-b border-gray-300">
+            <h3 className="text-5xl uppercase font-narrow font-light">
+              Explore the Library
+            </h3>
+          </div>
+          <div className="col-span-12 pb-4 flex">
+            <button
+              className="flex-grow text-2xl uppercase p-2 text-center text-white mr-5"
+              style={{ backgroundColor: "#19cf4c" }}
+            >
+              Browse the Collection
+            </button>
+            <input
+              type="text"
+              placeholder="Search by keyword, title, or author"
+              className="p-2 flex-grow text-2xl text-gray-500 border border-gray-300"
+            />
+          </div>
+          <div className="col-span-12 pb-4">
+            <h4 className="uppercase text-2xl mb-4 font-thin font-narrow border-b border-black">
+              Featured Collections
+            </h4>
+            <div className="flex">
+              <button className="flex-grow text-2xl uppercase p-2 text-center border border-black mr-5">
+                Gilles Deleuze
+              </button>
+              <button className="flex-grow text-2xl uppercase p-2 text-center border border-black mr-5">
+                Expressive Computing
+              </button>
+              <button className="flex-grow text-2xl uppercase p-2 text-center border border-black mr-5">
+                Deconstruction
+              </button>
+            </div>
           </div>
         </section>
       </div>
