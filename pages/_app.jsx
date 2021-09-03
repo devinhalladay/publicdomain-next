@@ -13,7 +13,6 @@ function MyApp({ Component, pageProps }) {
       <div className="content pt-24">
         <Component {...pageProps} />
       </div>
-      <footer>footer</footer>
     </>
   );
 }

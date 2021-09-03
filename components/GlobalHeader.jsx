@@ -2,18 +2,30 @@ import { useState } from "react";
 import Collapsible from "./Collapsible";
 import Image from "next/image";
 import { List, MagnifyingGlass } from "phosphor-react";
+import { motion } from "framer-motion";
+
+const menuVariants = {
+  open: { height: "24rem", right: "30vw" },
+  closed: { height: "42px", right: "70vw" },
+};
 
 export default function GlobalHeader(props) {
   const [isMenuVisible, toggleMenuVisibility] = useState(false);
+  const [menuHeight, setMenuHeight] = useState("3rem");
+
   return (
-    <header
-      className={`z-50 fixed transition-all duration-500 ease-in max-w-4xl overflow-hidden left-3 top-3 px-2 bg-white max-h-12 border border-black shadow-md ${
-        isMenuVisible
-          ? "right-64 max-h-96 max-w-7xl transition-all duration-500 ease-out"
-          : ""
-      }`}
+    <motion.header
+      layout
+      variants={menuVariants}
+      transition="linear"
+      className={
+        "z-50 fixed overflow-hidden left-3 top-3 px-2 bg-white border border-black"
+      }
+      initial="closed"
+      animate={isMenuVisible ? "open" : "closed"}
     >
-      <div
+      <motion.div
+        layout="position"
         className={`breadcrumbs  flex items-center h-10 ${
           isMenuVisible ? "border-b border-black" : ""
         }`}
@@ -65,9 +77,12 @@ export default function GlobalHeader(props) {
             </li>
           </ul>
         </nav>
-      </div>
+      </motion.div>
       {isMenuVisible && (
-        <div className="grid grid-cols-12 gap-5 pb-3">
+        <motion.div
+          layout="position"
+          className="pt-3 grid grid-cols-12 gap-5 pb-3"
+        >
           <nav className="col-span-6">
             <Collapsible title="Investigate" border>
               <a href="">Link</a>
@@ -100,8 +115,8 @@ export default function GlobalHeader(props) {
               <p className="inline-block pl-4 text-2xl">Example Article</p>
             </a>
           </div>
-        </div>
+        </motion.div>
       )}
-    </header>
+    </motion.header>
   );
 }

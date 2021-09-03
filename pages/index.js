@@ -8,7 +8,9 @@ export default function Home() {
     <div className="max-w-screen-2xl m-auto px-16 pb-16">
       <section className="grid grid-cols-12 gap-5">
         <div className="col-span-12 pb-6">
-          <h1 className="text-5xl uppercase font-narrow">Investigate</h1>
+          <h1 className="text-5xl uppercase font-narrow font-light">
+            Investigate
+          </h1>
         </div>
         <div className="col-span-4 border-t transition-all border-gray-400 hover:px-3 hover:bg-gray-100">
           <a href="">
