@@ -1,16 +1,16 @@
 import { useState } from "react";
 
-export default function Collapsible({ title, children }) {
+export default function Collapsible({ title, border, children }) {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="border-b border-black">
+    <div className={border ? "border-b border-black" : ""}>
       <header
         className="flex items-center h-14"
         onClick={() => setIsOpen(!isOpen)}>
         <h2
-          className="flex-grow uppercase text-3xl font-thin"
+          className="flex-grow uppercase text-4xl font-thin"
           style={{
-            fontVariationSettings: "wdth 1",
+            fontVariationSettings: "'wdth' 62",
           }}>
           {title}
         </h2>

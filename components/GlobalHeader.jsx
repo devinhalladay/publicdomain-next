@@ -6,8 +6,10 @@ export default function GlobalHeader(props) {
   const [isMenuVisible, toggleMenuVisibility] = useState(false);
   return (
     <header
-      className={`fixed transition-all left-3 top-3 px-2 bg-white border border-black shadow-md ${
-        isMenuVisible ? "right-64" : ""
+      className={`fixed transition-all duration-500 ease-in max-w-4xl overflow-hidden left-3 top-3 px-2 bg-white max-h-12 border border-black shadow-md ${
+        isMenuVisible
+          ? "right-64 max-h-96 max-w-7xl transition-all duration-500 ease-out"
+          : ""
       }`}>
       <div
         className={`breadcrumbs  flex items-center h-10 ${
@@ -119,7 +121,7 @@ export default function GlobalHeader(props) {
       {isMenuVisible && (
         <div className="grid grid-cols-12 gap-5 pb-3">
           <nav className="col-span-6">
-            <Collapsible title="Investigate">
+            <Collapsible title="Investigate" border>
               <a href="">Link</a>
               <a href="">Link</a>
             </Collapsible>
