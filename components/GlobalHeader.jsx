@@ -1,10 +1,12 @@
 import { useState } from "react";
+import Collapsible from "./Collapsible";
+import Image from "next/image";
 
 export default function GlobalHeader(props) {
   const [isMenuVisible, toggleMenuVisibility] = useState(false);
   return (
     <header
-      className={`absolute transition-all left-3 top-3 px-2 bg-white border border-black shadow-md ${
+      className={`fixed transition-all left-3 top-3 px-2 bg-white border border-black shadow-md ${
         isMenuVisible ? "right-64" : ""
       }`}>
       <div
@@ -27,27 +29,27 @@ export default function GlobalHeader(props) {
               x2="216"
               y2="128"
               stroke="#000000"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="16"></line>
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="16"></line>
             <line
               x1="40"
               y1="64"
               x2="216"
               y2="64"
               stroke="#000000"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="16"></line>
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="16"></line>
             <line
               x1="40"
               y1="192"
               x2="216"
               y2="192"
               stroke="#000000"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="16"></line>
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="16"></line>
           </svg>
         </div>
         <div className="flex transition-all rounded-sm hover:bg-gray-200 hover:p-1 mr-4">
@@ -64,9 +66,9 @@ export default function GlobalHeader(props) {
               r="84"
               fill="none"
               stroke="#000000"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="16"></circle>
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="16"></circle>
             <line
               x1="175.39356"
               y1="175.40039"
@@ -74,9 +76,9 @@ export default function GlobalHeader(props) {
               y2="224.00098"
               fill="none"
               stroke="#000000"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="16"></line>
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="16"></line>
           </svg>
         </div>
 
@@ -99,9 +101,9 @@ export default function GlobalHeader(props) {
                   points="96 48 176 128 96 208"
                   fill="none"
                   stroke="#000000"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="16"></polyline>
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="16"></polyline>
               </svg>
             </li>
             <li className="font-semibold inline-block flex items-center">
@@ -129,11 +131,13 @@ export default function GlobalHeader(props) {
           <div className="col-span-5 col-start-8">
             <h4 className="pt-4 pb-4">
               <a href="" className="flex">
-                <img
-                  src="https://source.unsplash.com/random"
-                  alt=""
-                  className="w-44 h-32 inline-block"
-                />
+                <div className="w-44 h-32 inline-block relative">
+                  <Image
+                    src="https://source.unsplash.com/random"
+                    layout="fill"
+                    alt=""
+                  />
+                </div>
                 <p className="inline-block pl-4 text-2xl">
                   Example Article
                 </p>

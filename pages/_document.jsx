@@ -17,10 +17,10 @@ class MyDocument extends Document {
           <link
             rel="preconnect"
             href="https://fonts.gstatic.com"
-            crossorigin
+            crossOrigin="true"
           />
           <link
-            href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@76,600;84,900;88,100;88,200;88,400&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62,100;76,400;76,600;84,900;88,100;88,200;88,400&display=swap"
             rel="stylesheet"
           />
         </Head>

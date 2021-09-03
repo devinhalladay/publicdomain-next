@@ -7,7 +7,11 @@ export default function Collapsible({ title, children }) {
       <header
         className="flex items-center h-14"
         onClick={() => setIsOpen(!isOpen)}>
-        <h2 className="flex-grow font-medium uppercase text-3xl">
+        <h2
+          className="flex-grow uppercase text-3xl font-thin"
+          style={{
+            fontVariationSettings: "wdth 1",
+          }}>
           {title}
         </h2>
         <svg
